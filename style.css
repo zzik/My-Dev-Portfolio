@@ -6,9 +6,9 @@ body {background-color: #222; margin: 0; padding: 0;}
 
 @media only screen and (max-width: 680px) {
 /*        ENTIRE SCREEN DIV   */
-    .m-all-div{position: absolute;top: 0; height: 100%; width: 100%;}
+    /*.m-all-div{position: absolute;top: 0; height: 100%; width: 100%;}*/
 /*        RED TOP DIV         */
-    .m-top-bg-div{width: 100%; height: 240px; position: relative}
+    .m-top-bg-div{width: 100vw; height: 240px; position: relative}
     .m-logo{position: absolute; top: .6rem; right: .5rem;}
 /*        WELCOME TEXT        */
     .m-welcome{ color: #fff; 
@@ -18,34 +18,57 @@ body {background-color: #222; margin: 0; padding: 0;}
     .m-w-two{font-size: 24px; font-weight: 400;margin-bottom: 0;}
     .m-w-three{font-size: 16px; font-weight: 300;margin-bottom: 0;}
 /* FLOATERS */
-    .m-floaters {position: absolute;top: 200px;}
+    .m-floaters {position: absolute;top: 200px; 
+        display: flex; height: auto; width: 100%;
+        justify-content: center; align-items: center; 
+        flex-direction: column; margin-bottom: 48px;}
 /* FLOATER ONE */    
     .m-floater-one{background: #777;
-                   height: 400px; width: 90vw; 
-                   position: absolute; left: 5vw;
+                   height: auto; width: 90vw; 
+                   /*position: absolute; left: 10vw; */
                    border-radius: 5%;
-                   color: #e0e0e0;}
+                   color: #ffffff; max-width: 80vw;}
     .paragraph-pad {width: auto; height: auto; padding-left: 24px; padding-top: 1px; 
                     padding-right: 24px; font-weight: 400; font-size: 18px; 
                     position: relative; top: 0;}
+/*Github URL*/
+
+.github-url{
+        font-size: 64px; margin-top: 10px;
+    
+    /**text-align: center; margin-top: 10px; height: 72px; width: 140px; 
+            background-color: #444; 
+            font-size: 24px; border-radius: 10%; border: none;*/
+        }
+
+
+
 /* FLOATER TWO*/    
     .m-floater-two {
-        background: #555; margin: 0px;
-        position: absolute; top: 420px;
-        width: 100vw; height: 400px;}
+        background: #555; margin: 10px 0px 0px 0px;
+        /*position: absolute; top: 420px;*/
+        width: 100vw; height: auto; font-size: 45px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;}
+
+        .m-floater-two a{text-decoration: none; color: white;}
+
+    .m-floater-two-element{width: 100%; height: 200px; 
+                            display: flex; border: white solid;
+                            justify-content: center; align-items: center;}
 /*EXPERIENCE TITLE*/
-    .experience-title{position: absolute; top: 840px; text-align: center;
+    .experience-title{/*position: absolute; top: 840px; */
+                    text-align: center; margin-top: 20px;
                     width: 100vw;font-size: 2em; line-height: 1em;}
 
 /* FLOATER THREE*/
-    .m-floater-three {border-radius: 5%; background-color: #333;
-                      width: 90vw; height: 400px; position: absolute;
-                      top: 900px; left: 5vw; color: #e0e0e0;
+    .m-floater-three {margin-top: 10px;
+                    border-radius: 5%; background-color: #333;
+                      width: 80vw; height: auto; color: #e0e0e0;
+                      /*position: absolute;top: 900px; left: 10vw;*/
                     margin-bottom: 60px;} /*leaving 60px of space on this.top*/
   }
   /*footer*/
   footer{ position: fixed; width: 100%;
-    bottom: 10px; text-align: center; margin-top: 50px;}
-  .footer-button{width: 30vw; border-radius: 10%; color: white; font-size: 18px;}
-  /*invisible footer separator*/
-  .invisidiv{position: absolute; top: 1300px; height: 70px; width: 100vw; opacity: 0;}
+    bottom: 0; text-align: center; margin-top: 50px;}
+  .footer-button{width: 100vw; border-radius: 10%; color: white; font-size: 18px;}
